@@ -17,10 +17,10 @@ const multerUpload = multer({
             cb(null, `${fileName}-${Date.now()}${fileExtension}`);
         },
     }),
-    fileFilter: (req, file, cb) => {
+/*     fileFilter: (req, file, cb) => {
         if (MIMETYPES.includes(file.mimetype)) cb(null, true);
         else cb(new Error(`Only ${MIMETYPES.join(' ')} mimetypes are allowed`));
-    },
+    }, */
     limits: {
         fieldSize: 10000000,
     },
